@@ -345,7 +345,7 @@ const PENTAGON_APPS = {
         metrics: ['flujo_caja', 'liquidez_disponible']
     },
     leadtarget: {
-        url: 'https://lead-target-rpvx.vercel.app',
+        url: 'https://lead-target.vercel.app',
         name: 'LeadTarget',
         storageKey: 'leadtarget_data',
         metrics: ['leads_activos', 'tasa_conversion']
