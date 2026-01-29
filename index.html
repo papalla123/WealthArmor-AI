@@ -3,220 +3,409 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WealthArmor AI | Pentágono de Poder Financiero</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>WealthArmor AI | Terminal de Inversión Élite 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-slate-950 text-gray-100">
-    <!-- Elite Navbar -->
-    <nav class="fixed top-0 w-full bg-slate-900/95 backdrop-blur-sm border-b border-amber-500/30 z-50">
-        <div class="container mx-auto px-4 py-4">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-2">
-                    <div class="w-10 h-10 bg-gradient-to-br from-amber-400 to-amber-600 rounded-lg flex items-center justify-center">
-                        <svg class="w-6 h-6 text-slate-900" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
-                        </svg>
-                    </div>
-                    <span class="text-xl font-bold bg-gradient-to-r from-amber-400 to-yellow-500 bg-clip-text text-transparent">WealthArmor AI</span>
+<body>
+    <!-- Obsidian Glass Navigation -->
+    <nav class="vault-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-shield">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+                    </svg>
                 </div>
-                <div class="hidden md:flex space-x-6">
-                    <a href="https://sueldopro-2026.vercel.app" class="text-gray-300 hover:text-amber-400 transition-colors text-sm">SueldoPro</a>
-                    <a href="https://margin-master-pro-pboy.vercel.app" class="text-gray-300 hover:text-amber-400 transition-colors text-sm">MarginMaster</a>
-                    <a href="https://liquidez-force.vercel.app" class="text-gray-300 hover:text-amber-400 transition-colors text-sm">LiquidezForce</a>
-                    <a href="https://lead-target-rpvx.vercel.app" class="text-gray-300 hover:text-amber-400 transition-colors text-sm">LeadTarget</a>
-                    <a href="#" class="text-amber-400 font-semibold text-sm">WealthArmor</a>
+                <div class="logo-text">
+                    <span class="logo-primary">WEALTHARMOR</span>
+                    <span class="logo-secondary">AI</span>
                 </div>
+            </div>
+            <div class="pentagon-links">
+                <a href="https://sueldopro-2026.vercel.app" class="pentagon-link" data-pentagon="1">
+                    <span class="link-icon">💼</span>
+                    <span class="link-text">SueldoPro</span>
+                </a>
+                <a href="https://margin-master-pro-pboy.vercel.app" class="pentagon-link" data-pentagon="2">
+                    <span class="link-icon">📊</span>
+                    <span class="link-text">MarginMaster</span>
+                </a>
+                <a href="https://liquidez-force.vercel.app" class="pentagon-link" data-pentagon="3">
+                    <span class="link-icon">💧</span>
+                    <span class="link-text">LiquidezForce</span>
+                </a>
+                <a href="https://lead-target-rpvx.vercel.app" class="pentagon-link" data-pentagon="4">
+                    <span class="link-icon">🎯</span>
+                    <span class="link-text">LeadTarget</span>
+                </a>
+                <a href="#" class="pentagon-link active" data-pentagon="5">
+                    <span class="link-icon">🛡️</span>
+                    <span class="link-text">WealthArmor</span>
+                </a>
             </div>
         </div>
     </nav>
 
-    <!-- The Vault Header -->
-    <section class="pt-32 pb-12 px-4">
-        <div class="container mx-auto max-w-4xl">
-            <div class="vault-header bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-2 border-amber-500/40 rounded-2xl p-8 shadow-2xl">
-                <div class="text-center mb-6">
-                    <h1 class="text-5xl font-bold mb-2 bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-600 bg-clip-text text-transparent">LA BÓVEDA</h1>
-                    <p class="text-gray-400">Patrimonio Neto Protegido</p>
+    <!-- Hero Vault - The Wealth Score -->
+    <section class="hero-vault">
+        <div class="vault-container">
+            <div class="wealth-score-card">
+                <div class="score-header">
+                    <h1 class="vault-title">LA BÓVEDA DE CRISTAL</h1>
+                    <p class="vault-subtitle">Terminal de Protección Patrimonial</p>
                 </div>
-                <div class="text-center">
-                    <div class="text-6xl font-bold text-emerald-400" id="netWorth">$0</div>
-                    <div class="mt-4 text-sm text-gray-500">Actualizado en tiempo real</div>
+                
+                <div class="wealth-ring-container">
+                    <svg class="wealth-ring" viewBox="0 0 200 200">
+                        <defs>
+                            <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#d4af37;stop-opacity:1" />
+                                <stop offset="50%" style="stop-color:#ffd700;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#d4af37;stop-opacity:1" />
+                            </linearGradient>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <!-- Background ring -->
+                        <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(212, 175, 55, 0.1)" stroke-width="12"/>
+                        <!-- Progress ring -->
+                        <circle id="wealthProgressRing" cx="100" cy="100" r="80" fill="none" 
+                                stroke="url(#goldGradient)" stroke-width="12" 
+                                stroke-linecap="round" 
+                                stroke-dasharray="502.65" 
+                                stroke-dashoffset="502.65"
+                                transform="rotate(-90 100 100)"
+                                filter="url(#glow)"/>
+                    </svg>
+                    <div class="wealth-score-value">
+                        <div class="score-amount" id="totalWealth">$0</div>
+                        <div class="score-label">Patrimonio Total</div>
+                    </div>
+                </div>
+
+                <div class="wealth-status-badge">
+                    <div class="status-icon">⭐</div>
+                    <div class="status-text" id="wealthStatusText">Iniciando Sistema</div>
+                    <div class="status-level" id="wealthLevel">Nivel 0</div>
+                </div>
+            </div>
+
+            <!-- Live Currency Widget -->
+            <div class="currency-widget">
+                <div class="widget-header">
+                    <div class="header-icon">💱</div>
+                    <h3>TIPO DE CAMBIO EN VIVO</h3>
+                    <div class="live-indicator">
+                        <span class="pulse-dot"></span>
+                        <span>LIVE</span>
+                    </div>
+                </div>
+                <div class="currency-grid">
+                    <div class="currency-pair">
+                        <div class="pair-flag">🇵🇪</div>
+                        <div class="pair-info">
+                            <div class="pair-label">PEN → USD</div>
+                            <div class="pair-rate">
+                                <span class="rate-compra">C: <span id="penBuy">3.75</span></span>
+                                <span class="rate-venta">V: <span id="penSell">3.78</span></span>
+                            </div>
+                        </div>
+                        <div class="pair-chart">
+                            <canvas id="penChart" width="80" height="40"></canvas>
+                        </div>
+                    </div>
+                    <div class="currency-pair">
+                        <div class="pair-flag">🇪🇺</div>
+                        <div class="pair-info">
+                            <div class="pair-label">EUR → USD</div>
+                            <div class="pair-rate">
+                                <span id="eurRate">1.08</span>
+                            </div>
+                        </div>
+                        <div class="pair-chart">
+                            <canvas id="eurChart" width="80" height="40"></canvas>
+                        </div>
+                    </div>
+                    <div class="currency-pair">
+                        <div class="pair-flag">₿</div>
+                        <div class="pair-info">
+                            <div class="pair-label">BTC → USD</div>
+                            <div class="pair-rate">
+                                <span id="btcRate">94,520</span>
+                            </div>
+                        </div>
+                        <div class="pair-chart">
+                            <canvas id="btcChart" width="80" height="40"></canvas>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- The Wealth Thermometer -->
-    <section class="py-8 px-4">
-        <div class="container mx-auto max-w-4xl">
-            <div class="bg-slate-900/50 border border-amber-500/30 rounded-xl p-6">
-                <h2 class="text-2xl font-bold mb-4 text-amber-400">🌡️ Termómetro de Riqueza</h2>
-                <div class="wealth-bar mb-4">
-                    <div class="wealth-progress" id="wealthProgress"></div>
-                </div>
-                <div class="flex justify-between text-xs text-gray-400 mb-2">
-                    <span>Supervivencia</span>
-                    <span>Seguridad</span>
-                    <span>Independencia</span>
-                    <span>Libertad</span>
-                    <span>Legado</span>
-                </div>
-                <div class="text-center mt-4">
-                    <span class="text-xl font-semibold text-emerald-400" id="wealthStatus">Calculando...</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Global Currency Engine -->
-    <section class="py-8 px-4">
-        <div class="container mx-auto max-w-4xl">
-            <div class="bg-slate-900/50 border border-amber-500/30 rounded-xl p-6">
-                <h2 class="text-2xl font-bold mb-4 text-amber-400">💱 Motor de Divisas Global</h2>
-                <div class="grid md:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Moneda Base</label>
-                        <select id="baseCurrency" class="w-full bg-slate-800 border border-amber-500/30 rounded-lg px-4 py-3 focus:outline-none focus:border-amber-500">
-                            <option value="USD">USD - Dólar Estadounidense</option>
-                            <option value="EUR">EUR - Euro</option>
-                            <option value="GBP">GBP - Libra Esterlina</option>
-                            <option value="JPY">JPY - Yen Japonés</option>
-                            <option value="CAD">CAD - Dólar Canadiense</option>
-                            <option value="AUD">AUD - Dólar Australiano</option>
-                            <option value="CHF">CHF - Franco Suizo</option>
-                            <option value="CNY">CNY - Yuan Chino</option>
-                            <option value="MXN">MXN - Peso Mexicano</option>
-                            <option value="BRL">BRL - Real Brasileño</option>
-                        </select>
+    <!-- AI Pentagon Advisor -->
+    <section class="pentagon-advisor">
+        <div class="advisor-container">
+            <div class="advisor-card">
+                <div class="advisor-header">
+                    <div class="advisor-avatar">
+                        <div class="avatar-ring"></div>
+                        <span class="avatar-icon">🤖</span>
                     </div>
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Tipo de Cambio a USD</label>
-                        <div class="bg-slate-800 border border-emerald-500/30 rounded-lg px-4 py-3 text-emerald-400 font-bold text-xl" id="exchangeRate">1.00</div>
+                    <div class="advisor-title">
+                        <h2>PENTAGON SYNC AI</h2>
+                        <p>Analizando tus 5 fuentes de poder</p>
+                    </div>
+                </div>
+                <div class="advisor-insights" id="aiInsights">
+                    <div class="insight-item loading">
+                        <div class="insight-icon">🔄</div>
+                        <div class="insight-text">Conectando con el Pentágono Financiero...</div>
+                    </div>
+                </div>
+                <div class="sync-status">
+                    <div class="sync-item" data-sync="sueldopro">
+                        <span class="sync-dot"></span>
+                        <span>SueldoPro</span>
+                    </div>
+                    <div class="sync-item" data-sync="margin">
+                        <span class="sync-dot"></span>
+                        <span>MarginMaster</span>
+                    </div>
+                    <div class="sync-item" data-sync="liquidez">
+                        <span class="sync-dot"></span>
+                        <span>LiquidezForce</span>
+                    </div>
+                    <div class="sync-item" data-sync="lead">
+                        <span class="sync-dot"></span>
+                        <span>LeadTarget</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- The Profit Fortress -->
-    <section class="py-8 px-4">
-        <div class="container mx-auto max-w-4xl">
-            <div class="bg-slate-900/50 border border-amber-500/30 rounded-xl p-6">
-                <h2 class="text-2xl font-bold mb-4 text-amber-400">🏰 La Fortaleza de Utilidades</h2>
-                <div class="mb-6">
-                    <label class="block text-sm font-medium mb-2">Utilidad Mensual</label>
-                    <input type="number" id="monthlyProfit" placeholder="10000" class="w-full bg-slate-800 border border-amber-500/30 rounded-lg px-4 py-3 focus:outline-none focus:border-amber-500">
+    <!-- Portfolio Armor -->
+    <section class="portfolio-section">
+        <div class="portfolio-container">
+            <div class="section-header">
+                <h2 class="section-title">PORTFOLIO ARMOR</h2>
+                <p class="section-subtitle">Diversificación Estratégica de Capital</p>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Chart Column -->
+                <div class="portfolio-chart-card">
+                    <canvas id="portfolioChart"></canvas>
+                    <div class="chart-legend" id="portfolioLegend"></div>
                 </div>
-                <button onclick="calculateFortress()" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-900 font-bold py-3 rounded-lg transition-all">
-                    ⚡ SEGMENTAR UTILIDADES
-                </button>
-                <div id="fortressResult" class="mt-6 grid grid-cols-2 gap-4 hidden">
-                    <div class="bg-slate-800/50 border border-red-500/30 rounded-lg p-4">
-                        <div class="text-xs text-gray-400 mb-1">Bóveda Impuestos (30%)</div>
-                        <div class="text-2xl font-bold text-red-400" id="taxVault">$0</div>
+
+                <!-- Asset Cards -->
+                <div class="asset-cards">
+                    <div class="asset-card" data-asset="fondos">
+                        <div class="asset-icon">📈</div>
+                        <div class="asset-info">
+                            <div class="asset-name">Fondos Mutuos</div>
+                            <div class="asset-value">
+                                <span class="currency">S/</span>
+                                <input type="number" class="asset-input" id="fondosValue" placeholder="0" />
+                            </div>
+                        </div>
+                        <div class="asset-percent" id="fondosPercent">0%</div>
                     </div>
-                    <div class="bg-slate-800/50 border border-blue-500/30 rounded-lg p-4">
-                        <div class="text-xs text-gray-400 mb-1">Bóveda Reinversión (30%)</div>
-                        <div class="text-2xl font-bold text-blue-400" id="reinvestVault">$0</div>
+
+                    <div class="asset-card" data-asset="factoring">
+                        <div class="asset-icon">💼</div>
+                        <div class="asset-info">
+                            <div class="asset-name">Factoring</div>
+                            <div class="asset-value">
+                                <span class="currency">S/</span>
+                                <input type="number" class="asset-input" id="factoringValue" placeholder="0" />
+                            </div>
+                        </div>
+                        <div class="asset-percent" id="factoringPercent">0%</div>
                     </div>
-                    <div class="bg-slate-800/50 border border-yellow-500/30 rounded-lg p-4">
-                        <div class="text-xs text-gray-400 mb-1">Bóveda de Paz (20%)</div>
-                        <div class="text-2xl font-bold text-yellow-400" id="peaceVault">$0</div>
+
+                    <div class="asset-card" data-asset="oro">
+                        <div class="asset-icon">🪙</div>
+                        <div class="asset-info">
+                            <div class="asset-name">Oro Físico</div>
+                            <div class="asset-value">
+                                <span class="currency">S/</span>
+                                <input type="number" class="asset-input" id="oroValue" placeholder="0" />
+                            </div>
+                        </div>
+                        <div class="asset-percent" id="oroPercent">0%</div>
                     </div>
-                    <div class="bg-slate-800/50 border border-emerald-500/30 rounded-lg p-4">
-                        <div class="text-xs text-gray-400 mb-1">Bóveda Libertad (20%)</div>
-                        <div class="text-2xl font-bold text-emerald-400" id="freedomVault">$0</div>
+
+                    <div class="asset-card" data-asset="dolares">
+                        <div class="asset-icon">💵</div>
+                        <div class="asset-info">
+                            <div class="asset-name">Dólares USD</div>
+                            <div class="asset-value">
+                                <span class="currency">$</span>
+                                <input type="number" class="asset-input" id="dolaresValue" placeholder="0" />
+                            </div>
+                        </div>
+                        <div class="asset-percent" id="dolaresPercent">0%</div>
                     </div>
+
+                    <div class="asset-card" data-asset="caja">
+                        <div class="asset-icon">💰</div>
+                        <div class="asset-info">
+                            <div class="asset-name">Caja Líquida</div>
+                            <div class="asset-value">
+                                <span class="currency">S/</span>
+                                <input type="number" class="asset-input" id="cajaValue" placeholder="0" />
+                            </div>
+                        </div>
+                        <div class="asset-percent" id="cajaPercent">0%</div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="recalculate-btn" id="recalculateBtn">
+                <span class="btn-icon">⚡</span>
+                <span class="btn-text">RECALCULAR PORTFOLIO</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Investment Radar Perú -->
+    <section class="radar-section">
+        <div class="radar-container">
+            <div class="section-header">
+                <h2 class="section-title">INVESTMENT RADAR PERÚ 2026</h2>
+                <p class="section-subtitle">Oportunidades reales, rendimientos verificados</p>
+            </div>
+
+            <div class="radar-grid" id="radarGrid">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- BVL News Ticker -->
+    <section class="news-ticker-section">
+        <div class="ticker-container">
+            <div class="ticker-label">
+                <span class="ticker-icon">📰</span>
+                <span>BVL LIVE</span>
+            </div>
+            <div class="ticker-content">
+                <div class="ticker-track" id="tickerTrack">
+                    <span class="ticker-item">⬆️ IGBVL +1.24% | S/24,567.89</span>
+                    <span class="ticker-item">🏦 Credicorp (BAP) alcanza máximo histórico: $185.40</span>
+                    <span class="ticker-item">⚡ Engie Energía Perú declara dividendos: S/0.15 por acción</span>
+                    <span class="ticker-item">🏗️ Graña y Montero gana licitación por $120M</span>
+                    <span class="ticker-item">💎 Southern Copper reporta utilidades récord en Q1 2026</span>
+                    <span class="ticker-item">📈 Intercorp Financial Services supera expectativas: ROE 18.2%</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Snowball Compound Chart -->
-    <section class="py-8 px-4">
-        <div class="container mx-auto max-w-4xl">
-            <div class="bg-slate-900/50 border border-amber-500/30 rounded-xl p-6">
-                <h2 class="text-2xl font-bold mb-4 text-amber-400">📈 Proyección Bola de Nieve</h2>
-                <div class="mb-4 grid md:grid-cols-3 gap-4">
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Capital Inicial</label>
-                        <input type="number" id="initialCapital" value="10000" class="w-full bg-slate-800 border border-amber-500/30 rounded-lg px-4 py-2 focus:outline-none focus:border-amber-500">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Aporte Mensual</label>
-                        <input type="number" id="monthlyContribution" value="500" class="w-full bg-slate-800 border border-amber-500/30 rounded-lg px-4 py-2 focus:outline-none focus:border-amber-500">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Retorno Anual %</label>
-                        <input type="number" id="annualReturn" value="10" class="w-full bg-slate-800 border border-amber-500/30 rounded-lg px-4 py-2 focus:outline-none focus:border-amber-500">
-                    </div>
-                </div>
-                <button onclick="generateCompoundChart()" class="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-bold py-3 rounded-lg transition-all mb-4">
-                    🚀 CALCULAR PROYECCIÓN
-                </button>
-                <canvas id="compoundChart"></canvas>
+    <!-- Advanced Calculator Tools -->
+    <section class="tools-section">
+        <div class="tools-container">
+            <div class="section-header">
+                <h2 class="section-title">CALCULADORAS ÉLITE</h2>
+                <p class="section-subtitle">Simuladores de escenarios de inversión</p>
             </div>
-        </div>
-    </section>
 
-    <!-- Anti-Crisis Simulator -->
-    <section class="py-8 px-4">
-        <div class="container mx-auto max-w-4xl">
-            <div class="bg-slate-900/50 border border-red-500/30 rounded-xl p-6">
-                <h2 class="text-2xl font-bold mb-4 text-red-400">🛡️ Simulador Anti-Crisis</h2>
-                <div class="mb-4">
-                    <label class="block text-sm font-medium mb-2">Valor de Inversión Actual</label>
-                    <input type="number" id="currentInvestment" placeholder="50000" class="w-full bg-slate-800 border border-red-500/30 rounded-lg px-4 py-3 focus:outline-none focus:border-red-500">
-                </div>
-                <div class="grid md:grid-cols-2 gap-4">
-                    <button onclick="simulateCrash()" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-lg transition-all">
-                        📉 CRASH -20%
+            <div class="tools-grid">
+                <!-- Compound Interest Calculator -->
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <h3>🚀 Interés Compuesto</h3>
+                    </div>
+                    <div class="tool-inputs">
+                        <div class="input-group">
+                            <label>Capital Inicial (S/)</label>
+                            <input type="number" id="compoundInitial" value="10000" />
+                        </div>
+                        <div class="input-group">
+                            <label>Aporte Mensual (S/)</label>
+                            <input type="number" id="compoundMonthly" value="500" />
+                        </div>
+                        <div class="input-group">
+                            <label>Tasa Anual (%)</label>
+                            <input type="number" id="compoundRate" value="9.5" step="0.1" />
+                        </div>
+                        <div class="input-group">
+                            <label>Años</label>
+                            <input type="number" id="compoundYears" value="10" min="1" max="40" />
+                        </div>
+                    </div>
+                    <button class="tool-calculate-btn" onclick="calculateCompound()">
+                        <span>CALCULAR</span>
                     </button>
-                    <button onclick="simulateInflation()" class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 rounded-lg transition-all">
-                        🔥 INFLACIÓN +15%
-                    </button>
+                    <div class="tool-result" id="compoundResult"></div>
                 </div>
-                <div id="crisisResult" class="mt-6 hidden">
-                    <div class="bg-slate-800/50 border border-red-500/30 rounded-lg p-4">
-                        <div class="text-sm text-gray-400 mb-2">Resultado del Escenario</div>
-                        <div class="text-3xl font-bold text-red-400 mb-4" id="crisisValue">$0</div>
-                        <div class="text-sm text-gray-300" id="crisisAdvice"></div>
+
+                <!-- ROI Crisis Simulator -->
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <h3>🛡️ Simulador Anti-Crisis</h3>
                     </div>
+                    <div class="tool-inputs">
+                        <div class="input-group">
+                            <label>Inversión Actual (S/)</label>
+                            <input type="number" id="crisisInvestment" value="50000" />
+                        </div>
+                        <div class="input-group">
+                            <label>Escenario de Crisis</label>
+                            <select id="crisisScenario">
+                                <option value="crash">Crash Bursátil -20%</option>
+                                <option value="inflation">Inflación Alta +15%</option>
+                                <option value="recession">Recesión -30%</option>
+                                <option value="devaluation">Devaluación PEN -25%</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="tool-calculate-btn" onclick="simulateCrisis()">
+                        <span>SIMULAR IMPACTO</span>
+                    </button>
+                    <div class="tool-result" id="crisisResult"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Wealth Passport -->
-    <section class="py-8 px-4 mb-16">
-        <div class="container mx-auto max-w-4xl">
-            <div class="bg-slate-900/50 border border-amber-500/30 rounded-xl p-6">
-                <h2 class="text-2xl font-bold mb-4 text-amber-400">📜 Pasaporte de Riqueza</h2>
-                <p class="text-gray-400 mb-4">Exporta tu plan estratégico completo</p>
-                <button onclick="exportWealthReport()" class="w-full bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700 text-slate-900 font-bold py-3 rounded-lg transition-all">
-                    💾 GENERAR REPORTE COMPLETO
+    <!-- Export Passport -->
+    <section class="export-section">
+        <div class="export-container">
+            <div class="export-card">
+                <div class="export-icon">📜</div>
+                <h2>PASAPORTE DE RIQUEZA</h2>
+                <p>Genera tu reporte estratégico completo con análisis de portfolio, proyecciones y recomendaciones personalizadas del Pentagon AI.</p>
+                <button class="export-btn" onclick="exportWealthReport()">
+                    <span class="btn-icon">💾</span>
+                    <span>GENERAR REPORTE COMPLETO</span>
                 </button>
             </div>
         </div>
     </section>
 
-    <!-- Iron-Clad Disclaimer -->
-    <footer class="bg-slate-900 border-t border-amber-500/30 py-8 px-4">
-        <div class="container mx-auto max-w-4xl">
-            <div class="bg-red-900/20 border border-red-500/30 rounded-lg p-6 mb-6">
-                <h3 class="text-lg font-bold text-red-400 mb-2">⚠️ DISCLAIMER LEGAL</h3>
-                <p class="text-sm text-gray-400">
-                    WealthArmor AI es una plataforma de simulación estratégica y educativa. No constituye asesoría financiera, legal o contable. 
-                    El uso de esta herramienta es responsabilidad exclusiva del usuario. Los datos de mercado son referenciales y pueden variar. 
-                    Consulte con profesionales certificados antes de tomar decisiones de inversión.
-                </p>
+    <!-- Legal Disclaimer -->
+    <footer class="vault-footer">
+        <div class="footer-container">
+            <div class="disclaimer-box">
+                <h3>⚠️ DISCLAIMER LEGAL</h3>
+                <p>WealthArmor AI es una plataforma de simulación estratégica y educativa. No constituye asesoría financiera, legal o contable profesional. El uso de esta herramienta es responsabilidad exclusiva del usuario. Los datos de mercado son referenciales y pueden variar. Las proyecciones no garantizan resultados futuros. Consulte con profesionales certificados (CFA, CPA) antes de tomar decisiones de inversión. Los enlaces a productos financieros son referenciales.</p>
             </div>
-            <div class="text-center text-gray-500 text-sm">
+            <div class="footer-credits">
                 <p>&copy; 2026 WealthArmor AI | Parte del Pentágono de Poder Financiero</p>
-                <p class="mt-2">Hecho con 🔥 para emprendedores que buscan libertad</p>
+                <p>Desarrollado con 🔥 para empresarios que buscan libertad financiera</p>
             </div>
         </div>
     </footer>
